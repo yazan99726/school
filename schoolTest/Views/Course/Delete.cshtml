@@ -1,0 +1,49 @@
+﻿@model schoolTest.Models.Course
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+
+
+<h1 class="text-danger">
+    Are you sure you want to delete this Course
+</h1>
+
+<div class="row">
+    <div class="col-md-4" style=" width: 100%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="courseId" class="control-label text-info"></label>
+            <input readonly="readonly" asp-for="courseId" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="courseId" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="courseName" class="control-label text-info"></label>
+            <input readonly="readonly" asp-for="courseName" class="form-control" style="border: 3px solid #ccc; " />
+            <span asp-validation-for="courseName" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="teacher.fname" class="control-label text-info">Teacher Name</label>
+            <input readonly="readonly" asp-for="teacher.fname" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="teacher.fname" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="maxMark" class="control-label text-info">Max Mark</label>
+            <input readonly="readonly" asp-for="maxMark" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="maxMark" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="minMark" class="control-label text-info">Min Mark</label>
+            <input readonly="readonly" asp-for="minMark" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="minMark" class="text-danger"></span>
+        </div>
+        <div style=" width:100%"></div>
+        <form asp-action="Delete" class="form-group mt-4 ml-2" style="width:50px; height:20px">
+            <input type="submit" value="Delete" class="btn btn-outline-danger" style="padding:15px 45px!important; font-size:18px" />
+
+        </form>
+    </div>
+
+</div>

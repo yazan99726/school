@@ -1,0 +1,65 @@
+﻿@model schoolTest.ViewModel.MarksCourseViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout - Teacher.cshtml";
+}
+
+<h1 class="text-danger">Edit Mark</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4" style=" width:100%; height:100%">
+        <form asp-action="Edit" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="courseId" class="control-label">Course Name</label>
+                <select asp-for="courseId" class="form-control" style="border: 3px solid #ccc; " asp-items="@(new SelectList(Model.Courses, "courseId", "courseName"))"></select>
+                <span asp-validation-for="courseId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="studentId" class="control-label">Student Name</label>
+                <select asp-for="studentId" class="form-control" style="border: 3px solid #ccc; " asp-items="@(new SelectList(Model.Students, "student_Id","FName"))"></select>
+                <span asp-validation-for="studentId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="FirstEx" class="control-label">First Exam</label>
+                <input asp-for="FirstEx" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="FirstEx" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="SecondEx" class="control-label">Second Exam</label>
+                <input asp-for="SecondEx" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="SecondEx" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="Participation" class="control-label">Participation</label>
+                <input asp-for="Participation" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="Participation" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="FinalEx" class="control-label">Final Exam</label>
+                <input asp-for="FinalEx" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="FinalEx" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="TotalMark" class="control-label">Total Mark</label>
+                <input asp-for="TotalMark" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="TotalMark" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important ">
+                <label asp-for="Status" class="control-label">Status</label>
+                <input asp-for="Status" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div style=" width:100%"></div>
+            <div class="form-group mt-5">
+                <input type="submit" value="Save" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

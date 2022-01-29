@@ -1,0 +1,70 @@
+﻿@model IEnumerable<schoolTest.Models.Enrollment>
+@{
+    ViewData["Title"] = "Table";
+    Layout = "~/Views/Shared/_Layout - Copy.cshtml";
+}
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h4 class="text-white text-capitalize ps-3" style="text-align:center">Table</h4>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Course Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Teacher Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ">Start Time</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">End Time</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2 py-1">
+
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm">@item.enrollCourse.courseName</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="text-xs font-weight-bold mb-0">@item.enrollCourse.teacher.fname</p>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                @item.startTime
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                @item.endTime
+                                            </p>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                }
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,131 @@
+﻿@model schoolTest.Models.Marks
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout - Teacher.cshtml";
+}
+
+
+
+<h1 class="text-danger">
+    Are you sure you want to delete this Mark
+</h1>
+
+<div class="row">
+    <div class="col-md-4" style=" width: 100%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="course.courseName" class="control-label text-info">Course Name</label>
+            <input readonly="readonly" asp-for="course.courseName" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="course.courseName" class="text-danger"></span>
+        </div>
+       <div class="form-group" style="width: 300px; margin-left: 30px !important">
+           <label asp-for="student.FName" class="control-label text-info">Student Name</label>
+           <label readonly="readonly" class="form-control" style="border: 3px solid #ccc">@(String.Format("{0} {1} {2} {3}", Model.student.FName, Model.student.SName, Model.student.TName, Model.student.LName))</label>
+           <span asp-validation-for="student.FName" class="text-danger"></span>
+       </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="FirstEx" class="control-label text-info">First Exam</label>
+            <input readonly="readonly" asp-for="FirstEx" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="FirstEx" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="SecondEx" class="control-label text-info">Second Exam</label>
+            <input readonly="readonly" asp-for="SecondEx" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="SecondEx" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="Participation" class="control-label text-info">Participation</label>
+            <input readonly="readonly" asp-for="Participation" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="Participation" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="FinalEx" class="control-label text-info">Final Exam</label>
+            <input readonly="readonly" asp-for="FinalEx" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="FinalEx" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="TotalMark" class="control-label text-info">Total Mark</label>
+            <input readonly="readonly" asp-for="TotalMark" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="TotalMark" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="width: 300px; margin-left: 30px !important">
+            <label asp-for="Status" class="control-label text-info">Status</label>
+            <input readonly="readonly" asp-for="Status" class="form-control" style="border: 3px solid #ccc" />
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+        <div style=" width:100%"></div>
+
+
+        <form asp-action="Delete" class="form-group mt-4 ml-2" style="width:50px; height:20px">
+            <input type="submit" value="Delete" class="btn btn-outline-danger" style="padding:15px 45px!important; font-size:18px" />
+
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Delete</title>
+    </head>
+    <body>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>Marks</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FirstEx)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FirstEx)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SecondEx)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SecondEx)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Participation)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Participation)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FinalEx)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FinalEx)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.TotalMark)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TotalMark)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-action="Index">Back to List</a>
+            </form>
+        </div>
+    </body>
+    </html>*@

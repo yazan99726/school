@@ -1,0 +1,56 @@
+﻿@model schoolTest.ViewModel.CourseTeaherViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+<!DOCTYPE html>
+
+<h1 class="text-danger">
+    Edit Cource
+</h1>
+
+
+<div class="row">
+    <div class="col-md-4" style=" width:100%; height:100%">
+        <form asp-action="Edit" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group " style="width: 300px; margin-left:30px!important ">
+                <label asp-for="courseId" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="courseId" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="courseId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important">
+                <label asp-for="courseName" class="control-label text-info"></label>
+                <input asp-for="courseName" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="courseName" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important">
+                <label asp-for="maxMark" class="control-label text-info"></label>
+                <input asp-for="maxMark" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="maxMark" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px; margin-left:30px!important">
+                <label asp-for="minMark" class="control-label text-info"></label>
+                <input asp-for="minMark" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="minMark" class="text-danger"></span>
+            </div>
+            <div class="form-group"  style="width: 300px; margin-left:30px!important">
+                <label asp-for="teacherId" class="control-label text-info"></label>
+                <select asp-for="teacherId" class="form-control"  style="border: 3px solid #ccc" 
+                        asp-items="@(new SelectList(Model.Teachers, "teacherId", "fname"))"></select>
+                <span asp-validation-for="teacherId" class="text-danger"></span>
+                <input type="hidden" asp-for="teacherId" class="form-control" />
+            </div>
+
+            <div style=" width:100%"></div>
+            <div class="form-group mt-5">
+                <input type="submit" value="Save" class="btn btn-outline-success" />
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+  

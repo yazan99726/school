@@ -1,0 +1,78 @@
+﻿@model IEnumerable<schoolTest.Models.Teacher>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h4 class="text-white text-capitalize ps-3" style="text-align:center">Teacher</h4>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Teacher Number</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Teacher Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Phone</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">SSN</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2"></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.teacherId</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@(String.Format("{0} {1} {2} {3}", item.fname, item.sname, item.tname, item.lname))</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.phone</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.ssn</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <a asp-action="Edit" asp-route-id="@item.teacherId " class="btn btn-info">Edit</a>
+                                                <a asp-action="Delete" asp-route-id="@item.teacherId " class="btn btn-danger">Delete</a>
+                                                @*@Html.ActionLink("Edit", "Edit", new { id = item.teacherId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.teacherId })*@
+                                            </p>
+                                        </td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <a asp-action="Create" class="btn btn-outline-success">Create New</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

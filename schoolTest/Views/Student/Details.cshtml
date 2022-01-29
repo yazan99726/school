@@ -1,0 +1,83 @@
+﻿@model schoolTest.Models.Student
+
+@{
+    ViewData["Title"] = "Table";
+    Layout = "~/Views/Shared/_Layout - Copy.cshtml";
+}
+
+
+
+
+    <div>
+        <h4>Student</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.student_Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.student_Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.LName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.birthDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.birthDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.city)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.city)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.state)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.state)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.street)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.street)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.build_No)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.build_No)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.GuardianPhone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.GuardianPhone)
+            </dd>
+        </dl>
+    </div>
+

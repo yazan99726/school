@@ -1,0 +1,80 @@
+﻿@model schoolTest.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+
+
+
+
+<h1 class="text-danger">
+    Delete Student
+</h1>
+
+<div class="row">
+    <div class="col-md-4" style=" width: 100%; height: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between ">
+        
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="width:300px">
+                <label asp-for="student_Id" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="student_Id" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="student_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="FName" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="FName" class="form-control" style="border: 3px solid #ccc; " />
+                <span asp-validation-for="FName" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="SName" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="SName" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="SName" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="TName" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="TName" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="TName" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="LName" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="LName" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="LName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="width: 300px">
+                <label asp-for="city" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="city" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="state" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="state" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="street" class="control-label text-info"></label>
+                <input asp-for="street" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="street" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="build_No" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="build_No" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="build_No" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width: 300px">
+                <label asp-for="GuardianPhone" class="control-label text-info"></label>
+                <input readonly="readonly" asp-for="GuardianPhone" class="form-control" style="border: 3px solid #ccc" />
+                <span asp-validation-for="GuardianPhone" class="text-danger"></span>
+            </div>
+
+            <div style=" width:100%"></div>
+            
+            <form asp-action="Delete" class="form-group mt-4 ml-2" style="width:50px; height:20px">
+                <input type="submit" value="Delete" class="btn btn-outline-danger" style="padding:15px 45px!important; font-size:18px" />
+            </form>
+    </div>
+
+</div>
+
+

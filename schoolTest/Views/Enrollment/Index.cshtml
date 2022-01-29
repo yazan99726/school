@@ -1,0 +1,85 @@
+﻿@model IEnumerable<schoolTest.Models.Enrollment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h4 class="text-white text-capitalize ps-3" style="text-align:center">Enrollment</h4>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Course</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Student</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">StartTime</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">EndTime</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Semester</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Year</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.enrollCourse.courseName</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@(String.Format("{0} {1} {2} {3}", item.enrollStudent.FName, item.enrollStudent.SName, item.enrollStudent.TName, item.enrollStudent.LName))</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.startTime</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.endTime</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.semester</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.year</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <a asp-action="Edit" asp-route-id="@item.enrollmentId " class="btn btn-info">Edit</a>
+                                                <a asp-action="Delete" asp-route-id="@item.enrollmentId " class="btn btn-danger">Delete</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <a asp-action="Create" class="btn btn-outline-success">Create New</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

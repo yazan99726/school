@@ -1,0 +1,64 @@
+﻿@model schoolTest.Models.Teacher
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Shar.cshtml";
+}
+
+<h1 class="text-danger">
+    Create Teacher
+</h1>
+         <div class="row">
+             <div class="col-md-4" style=" width:100%">
+                 <form asp-action="Create" asp-controller="Teacher" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content:space-between ">
+                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                     <div class="form-group" style="width:300px">
+                         <label asp-for="teacherId" class="control-label text-info"></label>
+                         <input asp-for="teacherId" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="teacherId" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="fname" class="control-label text-info"></label>
+                         <input asp-for="fname" class="form-control" style="border: 3px solid #ccc; " />
+                         <span asp-validation-for="fname" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="sname" class="control-label text-info"></label>
+                         <input asp-for="sname" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="sname" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="tname" class="control-label text-info"></label>
+                         <input asp-for="tname" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="tname" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="lname" class="control-label text-info"></label>
+                         <input asp-for="lname" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="lname" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="phone" class="control-label text-info"></label>
+                         <input asp-for="phone" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="phone" class="text-danger"></span>
+                     </div>
+                     <div class="form-group" style="width: 300px">
+                         <label asp-for="ssn" class="control-label text-info"></label>
+                         <input asp-for="ssn" class="form-control" style="border: 3px solid #ccc" />
+                         <span asp-validation-for="ssn" class="text-danger"></span>
+                     </div>
+                     <div style=" width:100%"></div>
+                     <div class="form-group mt-5 ml-2" style="width: 50px; height: 25px">
+                         <input type="submit" value="Create" class="btn btn-outline-success" style="padding:15px 45px!important" />
+                     </div>
+                 </form>
+                 
+             </div>
+         </div>
+
+
+            
+           
+            
+
+            

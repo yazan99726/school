@@ -1,0 +1,66 @@
+﻿@model schoolTest.Models.Student
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout - Copy.cshtml";
+}
+
+
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card my-4">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h4 class="text-white text-capitalize ps-3" style="text-align:center">Student</h4>
+</div>
+                    </div>
+                    <div class="card-body px-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Student Number</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Student Name</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">birth Date</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Location</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder ps-2">Phone</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@Model.student_Id</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@(String.Format("{0} {1} {2} {3}", Model.FName, Model.SName, Model.TName, Model.LName))</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@Model.birthDate</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@(String.Format("{0}/ {1}/ {2}/ {3}", Model.city, Model.state, Model.street, Model.build_No))</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@Model.GuardianPhone</p>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+

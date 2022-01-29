@@ -1,0 +1,55 @@
+﻿@model IEnumerable<schoolTest.Models.Enrollment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.startTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.endTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.semester)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.year)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.startTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.semester)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
