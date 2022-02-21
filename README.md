@@ -13,6 +13,9 @@
 ![Teacher Page](https://github.com/yazan99726/school/blob/main/schoolTest/ImageSchool/Teacher%20Page.PNG)
 ![add mark for student](https://raw.githubusercontent.com/yazan99726/school/main/schoolTest/ImageSchool/add%20mark%20in%20teacher.PNG)
 
+### Student Page
+![My Table](https://raw.githubusercontent.com/yazan99726/school/main/schoolTest/ImageSchool/My%20Table.PNG)
+![My Marks](https://raw.githubusercontent.com/yazan99726/school/main/schoolTest/ImageSchool/My%20Marks.PNG)
 
 
 ### Admin Page
